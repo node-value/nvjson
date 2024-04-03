@@ -1,0 +1,71 @@
+{
+    "events": {
+      "138586341": {
+        "description": null,
+        "id": 138586341,
+        "logo": null,
+        "name": "30th Anniversary Tour",
+        "subTopicIds": [
+          337184269,
+          337184283
+        ],
+        "subjectCode": null,
+        "subtitle": null,
+        "topicIds": [
+          324846099,
+          107888604
+        ]
+      },
+      "138586345": {
+        "description": null,
+        "id": 138586345,
+        "logo": "/images/UE0AAAAACEKo6QAAAAZDSVRN",
+        "name": "Berliner Philharmoniker",
+        "subTopicIds": [
+          337184268,
+          337184283,
+          337184275
+        ],
+        "subjectCode": null,
+        "subtitle": null,
+        "topicIds": [
+          324846099,
+          107888604,
+          324846100
+        ]
+      },
+      "138586349": {
+        "description": null,
+        "id": 138586349,
+        "logo": "/images/UE0AAAAACEKo7QAAAAZDSVRN",
+        "name": "Berliner Philharmoniker",
+        "subTopicIds": [
+          337184268,
+          337184288,
+          337184283,
+          337184275
+        ],
+        "subjectCode": null,
+        "subtitle": null,
+        "topicIds": [
+          324846099,
+          107888604,
+          324846100
+        ]
+      }
+    },
+    "areas": [
+      {
+        "areaId": 205705999,
+        "blockIds": []
+      },
+      {
+        "areaId": 205705998,
+        "blockIds": []
+      },
+      {
+        "areaId": 205705994,
+        "blockIds": []
+      }
+    ]
+  }
