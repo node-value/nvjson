@@ -12,8 +12,7 @@ def encode_bool(boolean):
 
 def encode_str(string):
     encoded_str = string.encode('utf-8')
-    packed_str = struct.pack(f"{len(encoded_str)}s", encoded_str)
-    return Tags.STR + encode_integer(len(packed_str)) + packed_str
+    return Tags.STR + encode_integer(len(encoded_str)) + encoded_str
 
 
 def encode_key(key):

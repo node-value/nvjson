@@ -12,9 +12,7 @@ def decode_bool(data):
 
 def decode_str(data):
     integer_tag = data[1:2]
-    packed_str = data[2 + Tags.INTEGER_LIST_SIZES.get(integer_tag):]
-    unpacked_str = struct.unpack(f"{len(packed_str)}s", packed_str)[0]
-    return unpacked_str.decode('utf-8')
+    return data[2 + Tags.INTEGER_LIST_SIZES.get(integer_tag):].decode('utf-8')
 
 
 def decode_key(key_byte):
