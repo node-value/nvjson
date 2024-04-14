@@ -12,7 +12,8 @@ def encode_bool(boolean):
 
 def encode_str(string):
     encoded_str = string.encode('utf-8')
-    return Tags.STR + encode_integer(len(encoded_str)) + encoded_str
+    packed_str = struct.pack(f"{len(encoded_str)}s", encoded_str)
+    return Tags.STR + encode_integer(len(packed_str)) + packed_str
 
 
 def encode_key(key):
@@ -23,6 +24,13 @@ def encode_key(key):
         print(f"To long key {key}, unable to encode")
         return
     return encode_integer(size) + encoded_str
+
+
+def encode_compound_key(key_l: list):
+    result = Tags.KEY_COMPOUND + encode_integer(len(key_l))
+    for key in key_l:
+        result += encode_key(key)
+    return result
 
 
 def encode_integer(val):
@@ -36,11 +44,3 @@ def encode_integer(val):
         return Tags.LONG + struct.pack(StructFormat.LONG, val)
     else:
         print(f"Unable to encode value: {val}")  # TODO Throw an error
-
-
-def encode_compound_key(key_l: list):
-    size = len(key_l)
-    result = Tags.KEY_COMPOUND + encode_integer(size)
-    for key in key_l:
-        result += encode_key(key)
-    return result
